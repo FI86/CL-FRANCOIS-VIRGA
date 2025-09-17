@@ -25,6 +25,21 @@ try:
 except Exception as e:
     print(e)
 
+# Sans Exception except intercepte vraiment tout
+# (meme les Keyboard interrupt, SystemExit ou GeneratorExit).
+# C'est generallement pas conseillé, il vaut mieux intercepter que l'ensemble des Exceptions.
+print("Appuie sur Ctrl+C pour tester...")
+
+try:
+    # interception d'un SystemExit
+    # import sys
+    # sys.exit(1)
+    while True:
+        pass  # boucle infinie sortie par ctrl+c (Keyboard interrupt)
+    
+except:
+    print("Exception interceptée ! (même Ctrl+C)")
+
 # Clause else
 # Le bloc else permet de distinguer la partie du code qui est susceptible de 
 # produire une exception de celle qui fait partie du comportement nominal du 
