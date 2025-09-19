@@ -14,6 +14,12 @@ def main():
         st = "x est plus grand que y"
     print(st)
 
+    if x >= 10 and x <= 100:
+        print("x est compris en 10 et 100")
+
+    if x < y < c:
+        print(f"y est compris entre {x} et {c}")
+
     # match case
     match c:
         case 1 | 2: print(x)
@@ -47,7 +53,7 @@ def main():
     for x in range(5, 10):
         print(x)
 
-    # Utiliser For sur une collection
+    # Utiliser for sur une collection
     jours = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
 
     for elem in jours:
